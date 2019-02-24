@@ -1,8 +1,11 @@
-install:
-	npm install
 start:
-	npm run babel-node -- src/bin/brain-games.js
+	DEBUG=app npx nodemon --watch .  --ext '.js' --exec npx gulp server
+
 lint:
-	npm run eslint src/**
+	npm run eslint .
+
 publish:
 	npm publish
+
+test:
+	npm test
